@@ -333,6 +333,9 @@ treatment.
 ```haskell
 applyRenames :: Ident -> String
 applyRenames ident = case identToString ident of
+    "as" -> "as_"
+    "box" -> "box_"
+    "false" -> "false_"
     "final" -> "final_"
     "fn" -> "fn_"
     "in" -> "in_"
@@ -341,6 +344,7 @@ applyRenames ident = case identToString ident of
     "match" -> "match_"
     "mod" -> "mod_"
     "proc" -> "proc_"
+    "true" -> "true_"
     "type" -> "type_"
     "where" -> "where_"
     name -> name
